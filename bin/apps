@@ -13,12 +13,6 @@ do
 done
 unset app;
 
-# install ohmyzsh
-echo
-echo "Installing ohmyzsh..."
-echo
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
-
 # install node version manager (nvm)
 echo
 echo "Installing nvm..."

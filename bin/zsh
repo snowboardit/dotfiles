@@ -7,3 +7,11 @@ sudo apt install zsh -y
 # change shell to ZSH
 echo "Changing default shell to zsh..."
 chsh -s $(which zsh)
+
+# install ohmyzsh
+echo
+echo "Installing ohmyzsh..."
+echo
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+
+# load zshrc
