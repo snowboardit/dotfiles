@@ -3,6 +3,7 @@
 # system
 alias cls="clear -x"
 alias cdd="cd ~/dev"
+alias bat="batcat"
 
 # git
 alias g="git"
