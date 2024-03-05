@@ -1,0 +1,27 @@
+# Aliases
+
+# system
+alias cls="clear -x"
+alias cdd="cd ~/dev"
+
+# git
+alias g="git"
+alias ga="git add"
+alias gc="git commit -m"
+alias gs="git status"
+alias gpl="git pull"
+alias gps="git push"
+
+# editor
+alias codenew="code . -n"
+
+# data transformation
+alias hextoascii="xxd -r -p"
+
+# shell config
+alias zshreload="source ~/.zshrc"
+alias zshconfig="cat ~/.zshrc"
+alias ohmyzsh="cat ~/.oh-my-zsh/oh-my-zsh.sh"
+
+# fun 
+alias weather="curl wttr.in"
