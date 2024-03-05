@@ -10,12 +10,12 @@ for file in .*; do
     cp -r $file "$HOME/$file"
     echo "$file copied to $HOME/$file"
 
-    # load the file if it's a shell configuration file
-    for f in $array; do
-      if [[ ".$f" == $file ]]; then
-        source "$HOME/$file"
-        echo "loaded $HOME/$file"
-      fi
-    done
+    # load aliases
+    if [[ $file == ".aliases" ]]; then
+      echo
+      echo "Loading aliases..."
+      echo
+      source "$HOME/.aliases"
+    fi
   fi
 done
