@@ -1,0 +1,21 @@
+#!/usr/bin/env zsh
+
+# shell config load list
+array=("bashrc" "zshrc" "aliases")
+
+# Install dotfiles locally
+for file in .*; do
+  if [ -f $file ]; then
+    # copy the file to the home directory
+    cp -r $file "$HOME/$file"
+    echo "$file copied to $HOME/$file"
+
+    # load the file if it's a shell configuration file
+    for f in $array; do
+      if [[ ".$f" == $file ]]; then
+        source "$HOME/$file"
+        echo "loaded $HOME/$file"
+      fi
+    done
+  fi
+done

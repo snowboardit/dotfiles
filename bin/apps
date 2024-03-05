@@ -1,0 +1,33 @@
+#!/usr/bin/env zsh
+
+# You know the drill
+sudo apt update
+sudo apt upgrade -y
+
+# Install apps with apt
+echo "Installing apps..."
+for app in $(cat apps.txt)
+do
+  sudo apt install $app
+  echo "$app installed"
+done
+unset app;
+
+# install ohmyzsh
+echo
+echo "Installing ohmyzsh..."
+echo
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+
+# install node version manager (nvm)
+echo
+echo "Installing nvm..."
+echo
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.7/install.sh | zsh
+
+# install go version manager (gvm)
+echo
+echo "Installing gvm..."
+echo
+sudo apt-get install bison -y
+zsh < <(curl -s -S -L https://raw.githubusercontent.com/moovweb/gvm/master/binscripts/gvm-installer)

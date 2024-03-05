@@ -1,0 +1,9 @@
+#!/usr/bin/env zsh
+
+# install ZSH
+echo "Installing ZSH..."
+sudo apt install zsh -y
+
+# change shell to ZSH
+echo "Changing default shell to zsh..."
+chsh -s $(which zsh)
