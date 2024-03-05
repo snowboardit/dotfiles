@@ -4,15 +4,10 @@
 for file in .*; do
   if [[ -f $file ]]; then
     # copy the file to the home directory
-    cp -r $file "$HOME/$file"
+    cp -rf $file "$HOME/$file"
     echo "$file copied to $HOME/$file"
-
-    # load aliases
-    if [[ $file == ".aliases" ]]; then
-      echo
-      echo "Loading aliases..."
-      echo
-      source "$HOME/.aliases"
-    fi
   fi
 done
+
+# reload shell
+source ~/.zshrc
