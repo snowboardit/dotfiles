@@ -10,4 +10,4 @@ for file in .*; do
 done
 
 # reload shell
-source ~/.zshrc
+source $HOME/.zshrc
